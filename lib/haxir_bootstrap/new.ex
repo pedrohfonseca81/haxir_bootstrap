@@ -21,7 +21,7 @@ defmodule HaxirBootstrap.New do
   ]
 
   def copy(target, binding \\ []) do
-    if binding[:create_dir], do: File.mkdir!("#{target}")
+    if binding[:create_dir], do: File.mkdir_p!(target)
 
     for {format, path, new_path} <- @default do
       new_path_replaced = String.replace(new_path, "default", binding[:app_name])
@@ -34,7 +34,8 @@ defmodule HaxirBootstrap.New do
           File.mkdir_p!(new_path)
 
         _file ->
-          file = render("#{@root}/templates/#{path}", binding)
+          file =
+            render("#{Path.relative_to(@root, Path.expand(target))}/templates/#{path}", binding)
 
           File.write!(new_path, file)
       end
