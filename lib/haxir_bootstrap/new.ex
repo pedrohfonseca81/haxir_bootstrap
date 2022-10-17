@@ -31,7 +31,7 @@ defmodule HaxirBootstrap.New do
 
       case format do
         :dir ->
-          File.mkdir(new_path)
+          File.mkdir_p!(new_path)
 
         _file ->
           file = render("#{@root}/templates/#{path}", binding)
