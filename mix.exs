@@ -13,7 +13,8 @@ defmodule HaxirBootstrap.MixProject do
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      aliases: aliases()
+      aliases: aliases(),
+      package: package()
     ]
   end
 
@@ -39,6 +40,13 @@ defmodule HaxirBootstrap.MixProject do
         "archive.build",
         "archive.install --force"
       ]
+    ]
+  end
+
+  defp package do
+    [
+      files: ~w(README.md lib test templates mix.exs),
+      link: %{"GitHub" => "https://github.com/tyde81/haxir_bootstrap"}
     ]
   end
 end
