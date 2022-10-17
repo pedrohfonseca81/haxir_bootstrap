@@ -1,21 +1,19 @@
-# Default
+# Haxir Bootstrap
 
-**TODO: Add description**
+### Installation
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `default` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:default, "~> 0.1.0"}
-  ]
-end
+First you clone the repository and enter the directory:
+```shell
+git clone https://github.com/tyde81/haxir_bootstrap.git && cd haxir_bootstrap
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/default>.
+Then we can install:
+```shell
+mix install
+```
 
+### Commands
+
+##### mix haxir.new (project_name)
+
+This command will generate the default structure
