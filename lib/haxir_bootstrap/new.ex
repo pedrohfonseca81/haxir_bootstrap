@@ -12,9 +12,11 @@ defmodule HaxirBootstrap.New do
     {:eex, "default/lib/default/application.ex", "lib/default/application.ex"},
     {:eex, "default/lib/default/consumer.ex", "lib/default/consumer.ex"},
     {:eex, "default/lib/default.ex", "lib/default.ex"},
+    {:eex, "default/test/test_helper.exs", "test/test_helper.exs"},
     {:eex, "default/test/default_test.exs", "test/default_test.exs"},
     {:eex, "default/config/config.exs", "config/config.exs"},
     {:eex, "default/config/dev.exs", "config/dev.exs"},
+    {:eex, "default/config/test.exs", "config/test.exs"},
     {:eex, "default/.formatter.exs", ".formatter.exs"},
     {:eex, "default/mix.exs", "mix.exs"},
     {:md, "default/README.md", "README.md"}
